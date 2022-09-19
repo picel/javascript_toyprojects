@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Color Flipper</title>
 </head>
 <body>
     <div class="appBar">
@@ -13,17 +13,22 @@
             Color Flipper
         </div>
         <div class="appBar__subTitle">
-            SangBeom Kim
+            <span class="hexButton">Hex</span>
+            <span class="simpleButton">Simple</span>
         </div>
     </div>
-    <div class="center">
-        <div class="colorIndicator">
-            Background Color :&nbsp;<span class="colorHex">#000000</span>
-        </div>
-        <div class="clickButton">
-            Click ME
+    <div id="canvas-wrap">
+        <canvas id="canvas"></canvas>
+        <div class="center">
+            <div class="colorIndicator">
+                Background Color :&nbsp;<span class="colorHex">#000000</span>
+            </div>
+            <div class="clickButton">
+                Click ME
+            </div>
         </div>
     </div>
 </body>
+    <script src="./colors.js"></script>
     <script src="./script.js"></script>
 </html>
