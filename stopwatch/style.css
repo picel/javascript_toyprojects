@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+/** google font IBM Plex Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+}
+
+.stopwatch{
+    width: 450px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stopwatch-time {
+    font-size: 60px;
+    font-weight: 700;
+    color: #333;
+}
+
+.stopwatch-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.stopwatch-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.stopwatch-btn-gre {
+    background-color: #00b894;
+}
+
+.stopwatch-btn-red {
+    background-color: #d63031;
+}
+
+.stopwatch-btn-yel {
+    background-color: #fdcb6e;
+}
+
+.stopwatch-btn-gre:hover {
+    background-color: #fff;
+    color: #00b894;
+    border: 1px solid #00b894;
+}
+
+.stopwatch-btn-red:hover {
+    background-color: #fff;
+    color: #d63031;
+    border: 1px solid #d63031;
+}
+
+.stopwatch-btn-yel:hover {
+    background-color: #fff;
+    color: #fdcb6e;
+    border: 1px solid #fdcb6e;
+}
