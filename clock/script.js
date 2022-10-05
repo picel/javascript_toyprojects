@@ -1,7 +1,3 @@
-let hour = 0;
-let minute = 0;
-let second = 0;
-
 function init() {
     let date = new Date();
     document.getElementById('hr').innerHTML = formatTime(date.getHours());
@@ -13,18 +9,9 @@ function init() {
 
 function timeCheck() {
     data = new Date();
-    if (data.getSeconds() != second) {
-        second = data.getSeconds();
-        document.getElementById('sec').innerHTML = formatTime(second);
-    }
-    if (data.getMinutes() != minute) {
-        minute = data.getMinutes();
-        document.getElementById('min').innerHTML = formatTime(minute);
-    }
-    if (data.getHours() != hour) {
-        hour = data.getHours();
-        document.getElementById('hr').innerHTML = formatTime(hour);
-    }
+    document.getElementById('hr').innerHTML = formatTime(data.getHours());
+    document.getElementById('min').innerHTML = formatTime(data.getMinutes());
+    document.getElementById('sec').innerHTML = formatTime(data.getSeconds());
 }
 
 function formatTime(time) {
