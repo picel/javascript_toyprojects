@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+/** google font IBM Plex Sans KR */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.appBar {
+    background-color: white;
+    height: 50px;
+    line-height: 30px;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.appBar__title {
+    float: left;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-30%, -50%);
+}
+
+.appBar__subTitle {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    transform: translate(-10%, -50%);
+}
+
+.center {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+}
+
+#bg1 {
+    width: 50%;
+    height: 100%;
+}
+
+#bg2 {
+    width: 50%;
+    height: 100%;
+}
+
+.colorIndicator {
+    background-color: white;
+    color: #000000;
+    padding: 10px 20px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 45px;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.clickButton {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.clickButton:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.hexButton {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 3px 10px;
+}
+
+.simpleButton {
+    cursor: pointer;
+    background-color: white;
+    padding: 3px 10px;
+}
