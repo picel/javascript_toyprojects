@@ -9,13 +9,12 @@
     <title>Clock</title>
 </head>
 <body>
-    <div id="appBar">
-        <div id="appBar__title">
-            Clock
-        </div>
-    </div>
     <div class="container">
         <div class="center">
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary" id="12">12</button>
+                <button type="button" class="btn btn-primary" id="24">24</button>
+            </div>
             <div class="col">
                 <div class="clock">
                     <span id="hr">00</span>
@@ -23,7 +22,20 @@
                     <span id="min">00</span>
                     :
                     <span id="sec">00</span>
+                    <span id="ampm"></span>
                 </div>
+            </div>
+            <div class="btn-group center-bottom">
+                <button id="wallpaperBTN" class="btn btn-warning responsive-font-size">Change Wallpaper Color</button>
+                <button id="clockBTN" class="btn btn-secondary responsive-font-size">Change Clock Color</button>
+            </div>
+        </div>
+        <div class="colorPickerBTN" hidden>
+            <div id="nameOfButton"></div>
+            <div class="row">
+                <div id="redBTN" class="colorPicker__color colorPicker__color--red"></div>
+                <div id="greenBTN" class="colorPicker__color colorPicker__color--green"></div>
+                <div id="blueBTN" class="colorPicker__color colorPicker__color--blue"></div>
             </div>
         </div>
     </div>
