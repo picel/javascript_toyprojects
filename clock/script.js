@@ -1,6 +1,7 @@
 let wallpaperSelected = false;
 let clockSelected = false;
 let is12Hour = false;
+let colors = document.querySelectorAll('.colorPicker__color');
 
 function init() {
     let date = new Date();
@@ -30,6 +31,16 @@ function formatTime(time) {
     }
 }
 
+colors.forEach(element => {
+    element.addEventListener('click', function() {
+        if (wallpaperSelected) {
+            document.body.style.background = element.style.background;
+        } else if (clockSelected) {
+            document.getElementsByClassName('clock')[0].style.color = element.style.background;
+        }
+    });
+});
+
 function wallpaperPicker() {
     if (!(!document.getElementsByClassName('colorPickerBTN')[0].hasAttribute('hidden') && clockSelected)) {
         document.getElementsByClassName('colorPickerBTN')[0].toggleAttribute('hidden');
@@ -48,29 +59,7 @@ function clockPicker() {
     document.getElementById('nameOfButton').innerHTML = 'Clock';
 }
 
-function redBTN() {
-    if (wallpaperSelected) {
-        document.body.style.background = 'red';
-    } else if (clockSelected) {
-        document.getElementsByClassName('clock')[0].style.color = 'red';
-    }
-}
 
-function greenBTN() {
-    if (wallpaperSelected) {
-        document.body.style.background = 'green';
-    } else if (clockSelected) {
-        document.getElementsByClassName('clock')[0].style.color = 'green';
-    }
-}
-
-function blueBTN() {
-    if (wallpaperSelected) {
-        document.body.style.background = 'blue';
-    } else if (clockSelected) {
-        document.getElementsByClassName('clock')[0].style.color = 'blue';
-    }
-}
 
 function twelveHour() {
     is12Hour = true;
@@ -92,12 +81,22 @@ function twentyFourHour() {
     document.getElementById("24").classList.add("btn-primary");
 }
 
+function rgbToHex(rgb) {
+    let hex = Number(rgb).toString(16);
+    if (hex.length < 2) {
+        hex = "0" + hex;
+    }
+    return hex;
+}
+
+function closePicker() {
+    document.getElementsByClassName('colorPickerBTN')[0].toggleAttribute('hidden');
+}
+
 init();
 
 document.getElementById("12").addEventListener("click", twelveHour);
 document.getElementById("24").addEventListener("click", twentyFourHour);
 document.getElementById('wallpaperBTN').addEventListener('click', wallpaperPicker);
 document.getElementById('clockBTN').addEventListener('click', clockPicker);
-document.getElementById('redBTN').addEventListener('click', redBTN);
-document.getElementById('blueBTN').addEventListener('click', blueBTN);
-document.getElementById('greenBTN').addEventListener('click', greenBTN);
+document.getElementById('closeBTN').addEventListener('click', closePicker);
