@@ -1,4 +1,4 @@
-const menu = [
+const menuList = [
     {
         id: 1,
         title: "buttermilk pancakes",
