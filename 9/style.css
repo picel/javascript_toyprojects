@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+/** google font IBM Plex Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.filter {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.center {
+    position: absolute;
+    color: white;
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#toggleBtn {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
