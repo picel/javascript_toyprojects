@@ -7,6 +7,24 @@ let cPOS = document.querySelector("#c").offsetTop;
 let dPOS = document.querySelector("#d").offsetTop;
 let goTop = document.getElementById('go-top');
 
+let observer = new IntersectionObserver((e)=>{
+    if (e[0].isIntersecting) {
+        e[0].target.classList.add('rainbow');
+    } else {
+        e[0].target.classList.remove('rainbow');
+    }
+    if (e[1].isIntersecting) {
+        e[1].target.classList.add('shake');
+    } else {
+        e[1].target.classList.remove('shake');
+    }
+}, {threshold: 0.5});
+
+let sections = document.querySelectorAll('.section');
+
+observer.observe(sections[1])
+observer.observe(sections[2])
+
 let buttons = document.querySelectorAll('.appBar__nav');
 
 buttons.forEach(function(button) {
