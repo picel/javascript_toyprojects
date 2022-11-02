@@ -38,8 +38,12 @@ body {
     font-size: 20px;
     position: absolute;
     top: 50%;
-    right: 30%;
+    right: 10%;
     transform: translate(-10%, -40%);
+}
+
+.appBar__selected {
+    color: cornflowerblue;
 }
 
 .appBar__nav {
@@ -51,6 +55,10 @@ body {
 
 .appBar__nav:hover {
     color: cornflowerblue;
+}
+
+.appBar__spacer {
+    height: 50px;
 }
 
 #appBar__spacer {
