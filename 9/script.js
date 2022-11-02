@@ -4,21 +4,19 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 let btn = document.getElementById('toggleBtn');
 
+let width = window.innerWidth;
+let height = window.innerHeight;
+
 var player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-        height: '1080',
-        width: '1920',
+        height: height,
+        width: width,
         videoId: '5-sfG8BV8wU',
         events: {
-            'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
         }
     });
-}
-
-function onPlayerReady(event) {
-    event.target.playVideo();
 }
 
 var done = false;
@@ -43,3 +41,7 @@ btn.addEventListener("click", function() {
         btn.classList.add("btn-secondary");
     }
 });
+
+window.onscroll = function() {
+    window.scrollTo(0, 0);
+}
