@@ -5,6 +5,7 @@ let aPOS = document.querySelector("#a").offsetTop;
 let bPOS = document.querySelector("#b").offsetTop;
 let cPOS = document.querySelector("#c").offsetTop;
 let dPOS = document.querySelector("#d").offsetTop;
+let goTop = document.getElementById('go-top');
 
 let buttons = document.querySelectorAll('.appBar__nav');
 
@@ -27,6 +28,7 @@ window.onscroll = function() {
     scrollPosition = window.pageYOffset;
     if (scrollPosition > 0) {
         appBar.classList.remove('hidden');
+        goTop.hidden = false;
         if (scrollPosition >= aPOS && scrollPosition < bPOS) {
             for (let i = 0; i < buttons.length; i++) {
                 buttons[i].classList.remove('appBar__selected');
@@ -50,5 +52,12 @@ window.onscroll = function() {
         }
     } else {
         appBar.classList.add('hidden');
+        goTop.hidden = true;
     }
 }
+
+function toHome() {
+    window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+goTop.addEventListener("click", toHome);
