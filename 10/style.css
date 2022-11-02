@@ -13,7 +13,8 @@ body {
 }
 
 #appBar {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
+    
     height: 50px;
     line-height: 30px;
     padding: 0 10px;
