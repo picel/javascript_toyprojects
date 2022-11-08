@@ -1,4 +1,4 @@
-destTime = new Date(2022, 12, 27, 0, 0, 0, 0);
+var destTime = new Date("December 27, 2022 00:00:00");
 
 setInterval(timeUpdate, 1000);
 
