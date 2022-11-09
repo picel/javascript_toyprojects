@@ -42,6 +42,10 @@ btn.addEventListener("click", function() {
     }
 });
 
+function stopVideo() {
+    player.stopVideo();
+}
+
 window.onscroll = function() {
     window.scrollTo(0, 0);
 }

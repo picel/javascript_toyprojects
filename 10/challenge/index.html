@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/ce77ac93cc.js"
+            crossorigin="anonymous"></script>
+        <title>Scroll NavBar Challenge</title>
+    </head>
+    <body>
+        <div id="appBar" class="hidden">
+            <div id="appBar__title">
+                Scroll NavBar
+            </div>
+            <div id="appBar__menu">
+                <span class="appBar__nav">a</span>
+                <span class="appBar__nav">b</span>
+                <span class="appBar__nav">c</span>
+                <span class="appBar__nav">d</span>
+            </div>
+        </div>
+        <div class="section" id="a" style="background-color: lightblue;">
+            <div class="section__title">
+                Section a
+            </div>
+        </div>
+        <div class="section" id="b" style="background-color: lightcoral;">
+            <div class="appBar__spacer"></div>
+            <div class="section__title">
+                OHHHHHH RAIIIIINBOOOOOOW
+            </div>
+        </div>
+        <div class="section" id="c" style="background-color: lightgreen;">
+            <div class="appBar__spacer"></div>
+            <div class="section__title">
+                EEEEAARTHHH QUUUUAAAAKEEE
+            </div>
+        </div>
+        <div class="section" id="d" style="background-color: lightgreen;">
+            <div class="section" id="player"></div>
+        </div>
+        <div id="go-top" hidden>
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </body>
+    <script src="./script.js"></script>
+</html>
