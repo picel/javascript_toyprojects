@@ -10,6 +10,8 @@
             rel="stylesheet"
             integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
             crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
         <title>Todos</title>
     </head>
     <body>
@@ -33,13 +35,28 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">할 일</th>
-                                <th scope="col">삭제</th>
+                                <th scope="col" style="width: 80%;">할 일</th>
+                                <th scope="col">작업</th>
                             </tr>
                         </thead>
                         <tbody id="toDoList">
                         </tbody>
                     </table>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="modal" style="height:300px;" hidden>
+            <div class="container center" style="width:500px;">
+                <h2>수정하기</h2>
+                <input type="text" class="form-control"
+                    aria-label="edit"
+                    aria-describedby="basic-addon2" id="editForm"
+                    style="width:
+                    300px;">
+                <div style="height: 20px;"></div>
+                <div>
+                    <button id="editBtn" type="button" class="btn btn-primary">수정하기</button>
+                    <button id="closeBtn" type="button" class="btn btn-danger">닫기</button>
                 </div>
             </div>
         </div>
