@@ -16,6 +16,14 @@ img {
     border-radius: 20px;
 }
 
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
 .wrapper {
     position: absolute;
     top: 50%;
@@ -34,4 +42,6 @@ img {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
 }

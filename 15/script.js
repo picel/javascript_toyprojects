@@ -11,11 +11,21 @@ function next() {
         if (idx == index) {
             flag = idx;
         }
+        // animation transition
+        let mvPerFrame;
         if (idx == index - 1 || (idx == images.length - 1 && index == 0)) {
             image.style.transform = "translateX(" + (curPos + 2000) + "px)";
         } else {
-            image.style.transform = "translateX(" + (curPos - 1000) + "px)";
+            mvPerFrame = -10;
+            target = curPos - 1000;
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    image.style.transform = "translateX(" + (curPos + mvPerFrame) + "px)";
+                    curPos += mvPerFrame;
+                }, 10 * i);
+            }
         }
+
     });
     index = flag + 1;
     if (index === images.length) {
@@ -35,7 +45,14 @@ function prev() {
         if (idx == index + 1 || (idx == 0 && index == images.length - 1)) {
             image.style.transform = "translateX(" + (curPos - 2000) + "px)";
         } else {
-            image.style.transform = "translateX(" + (curPos + 1000) + "px)";
+            mvPerFrame = 10;
+            target = curPos + 1000;
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    image.style.transform = "translateX(" + (curPos + mvPerFrame) + "px)";
+                    curPos += mvPerFrame;
+                }, 10 * i);
+            }
         }
     });
     index = flag - 1;
