@@ -35,11 +35,3 @@ img {
     align-items: center;
     justify-content: center;
 }
-
-.slide_right {
-    animation: slide_right 1s ease-in-out;
-}
-
-.slide_left {
-    animation: slide_left 1s ease-in-out;
-}

@@ -1,4 +1,6 @@
 let images = document.querySelectorAll("img");
+let index = 1;
+let flag = 0;
 
 function next() {
     images.forEach((image, idx) => {
@@ -6,12 +8,19 @@ function next() {
         curPos = curPos.replace("translateX(", "");
         curPos = curPos.replace("px)", "");
         curPos = parseInt(curPos);
-        if (idx == 0) {
+        if (idx == index) {
+            flag = idx;
+        }
+        if (idx == index - 1 || (idx == images.length - 1 && index == 0)) {
             image.style.transform = "translateX(" + (curPos + 2000) + "px)";
         } else {
             image.style.transform = "translateX(" + (curPos - 1000) + "px)";
         }
     });
+    index = flag + 1;
+    if (index === images.length) {
+        index = 0;
+    }
 }
 
 function prev() {
@@ -20,8 +29,19 @@ function prev() {
         curPos = curPos.replace("translateX(", "");
         curPos = curPos.replace("px)", "");
         curPos = parseInt(curPos);
-        image.style.transform = "translateX(" + (curPos + 1000) + "px)";
+        if (idx == index) {
+            flag = idx;
+        }
+        if (idx == index + 1 || (idx == 0 && index == images.length - 1)) {
+            image.style.transform = "translateX(" + (curPos - 2000) + "px)";
+        } else {
+            image.style.transform = "translateX(" + (curPos + 1000) + "px)";
+        }
     });
+    index = flag - 1;
+    if (index === -1) {
+        index = images.length - 1;
+    }
 }
 
 document.getElementById("next").onclick = next;
