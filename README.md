@@ -1,3 +1,3 @@
 # javascript_toyprojects
 
-[Site](js.picel.net)
+[Site](http://js.picel.net)
