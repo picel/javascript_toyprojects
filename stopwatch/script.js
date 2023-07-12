@@ -19,9 +19,9 @@ function stop() {
 function reset() {
     if (!timerStart) {
     stTime = null
-        document.getElementById('millisec').innerHTML = '00'
+        document.getElementById('millisec').innerHTML = '000'
         document.getElementById('sec').innerHTML = '00'
-        document.getElementById('min').innerHTML = '000'
+        document.getElementById('min').innerHTML = '00'
     }
 }
 
