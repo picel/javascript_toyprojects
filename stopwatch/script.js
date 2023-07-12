@@ -7,7 +7,7 @@ function start() {
     }
 
     if (!timerStart) {
-        timerStart = setInterval(timeCheck, 10)
+        timerStart = setInterval(timeCheck, 1)
     }
 }
 
@@ -21,13 +21,13 @@ function reset() {
     stTime = null
         document.getElementById('millisec').innerHTML = '00'
         document.getElementById('sec').innerHTML = '00'
-        document.getElementById('min').innerHTML = '00'
+        document.getElementById('min').innerHTML = '000'
     }
 }
 
 function timeCheck() {
     let time = new Date().getTime() - stTime
-    let ms = Math.floor(time % 1000 / 10)
+    let ms = Math.floor(time % 1000)
     let s = Math.floor(time / 1000) % 60
     let m = Math.floor(time / 60000) % 60
 
@@ -42,6 +42,17 @@ function formatTime(time) {
     } else {
         return time
     }
+}
+
+function msFormat(time) {
+    let res = time
+    if (time < 100) {
+        res = '0' + time
+    }
+    if (time < 10) {
+        res = '0' + time
+    }
+    return res
 }
 
 document.getElementById("start").addEventListener("click", start);
