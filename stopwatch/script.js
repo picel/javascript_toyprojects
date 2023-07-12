@@ -31,7 +31,7 @@ function timeCheck() {
     let s = Math.floor(time / 1000) % 60
     let m = Math.floor(time / 60000) % 60
 
-    document.getElementById('millisec').innerHTML = formatTime(ms)
+    document.getElementById('millisec').innerHTML = msFormat(ms)
     document.getElementById('sec').innerHTML = formatTime(s)
     document.getElementById('min').innerHTML = formatTime(m)
 }
