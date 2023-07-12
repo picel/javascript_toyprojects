@@ -50,7 +50,7 @@ function msFormat(time) {
         res = '0' + time
     }
     if (time < 10) {
-        res = '0' + time
+        res = '00' + time
     }
     return res
 }
